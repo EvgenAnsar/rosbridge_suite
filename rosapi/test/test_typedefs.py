@@ -35,6 +35,11 @@ class TestUtils(unittest.TestCase):
         # should be None for an atomic
         self.assertEqual(actual_typedef, None)
 
+        # Test for float type
+        actual_typedef = objectutils.get_typedef("float")
+        # should be None for an atomic
+        self.assertEqual(actual_typedef, None)
+
     def test_handle_sequences(self):
         # Test for boolean sequence type
         actual_typedef = objectutils.get_typedef("sequence<boolean>")
