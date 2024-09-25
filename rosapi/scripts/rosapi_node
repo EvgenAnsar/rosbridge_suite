@@ -177,7 +177,7 @@ class Rosapi(Node):
 
     def get_action_servers(self, request, response):
         """Called by the rosapi/GetActionServers service. Returns a list of action servers based on actions standard topics"""
-        topics = proxy.get_topics(self.globs.topics, include_hidden=True)
+        topics = proxy.get_topics(self.globs.topics, include_hidden=False)
         response.action_servers = proxy.filter_action_servers(topics)
         return response
 
